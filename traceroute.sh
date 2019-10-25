@@ -99,7 +99,7 @@ for (( nbSaut=1;nbSaut<=30;nbSaut++))
 #		echo "On a fini le port : $port avec le protocole ${protoport[$proto]}"
 done
 cat traceroute.$ns.log |sed 's/\[inconnu\]/\[AS-connu\]/g'|sed 's/inconnu/inconnu \[AS-connu\]/g'|sed 's/AS-connu/AS-pas-connu/g' >$1.route
-cp $1.route $1.route.old
+#cp $1.route $1.route.old
 rm traceroute.$ns.log
 #--------------------------Mise en forme du fichier.route--------------
         #On ne sélectionne que les résultats de traceroute, puis on les met en forme avec "IP;[AS]".
